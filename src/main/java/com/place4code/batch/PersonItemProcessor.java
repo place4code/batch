@@ -17,7 +17,7 @@ das Sie anschließend in eine Person in Großbuchstaben umwandeln.
 */
 public class PersonItemProcessor implements ItemProcessor<Person, Person> {
 
-    private static final Logger log = LoggerFactory.getLogger(PersonItemProcessor.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(PersonItemProcessor.class);
 
     @Override
     public Person process(final Person person) throws Exception {
@@ -26,7 +26,7 @@ public class PersonItemProcessor implements ItemProcessor<Person, Person> {
 
         final Person transformedPerson = new Person(firstName, lastName);
 
-        log.info("Konvertierung (" + person + ") in (" + transformedPerson + ")");
+        LOGGER.info("Konvertierung (" + person + ") in (" + transformedPerson + ")");
 
         return transformedPerson;
     }
